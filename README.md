@@ -30,4 +30,8 @@ Para utilização do PgBouncer, a aplicação invés de ser apontada para a port
 #### Instância DR
 
 Possuir uma instância específica para Disaster Recovery é extremamente importante em casos de desastre.
-No Postgres essas instâncias são mantidas através da replicação física nativa, onde arquivos de log de transação chamado WALs são enviados e aplicados na máquina "secundária" 
+No Postgres essas instâncias são mantidas através da replicação física nativa, onde arquivos de log de transação chamado WALs são enviados e aplicados na máquina "secundária" para mantê-la atualizada com as últimas alterações realizadas na máquina principal.
+
+#### Particionamento
+
+Particionamento é uma arquitetura extremamente importante para manter tabelas que guardem dados históricos, ao particionar uma tabela desta maneira fica mais fácil de deletar dados que não são mais necessários e também proporciona performance
